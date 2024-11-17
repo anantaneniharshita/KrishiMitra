@@ -8,11 +8,12 @@ Home Page
 
 
 
-crop prediction
+Crop prediction
 
 
 
-![Screenshot 2024-06-04 222537](https://github.com/user-attachments/assets/f60ae48b-1797-49f0-a320-b5a65cfba524)
+![image](https://github.com/user-attachments/assets/b435e954-9272-4be1-9c8e-725bb1765da8)
+
 
 
 ![Screenshot 2024-06-05 225651](https://github.com/user-attachments/assets/7060440b-e30b-4e74-a73a-4184b8d4da59)
@@ -21,15 +22,15 @@ crop prediction
 ![Screenshot 2024-06-05 225605](https://github.com/user-attachments/assets/e2790748-2782-478e-95b4-7eaa1b1499d1)
 
 
-disease detection
+Disease detection
 
 
-![Screenshot 2024-06-04 223546](https://github.com/user-attachments/assets/b93077eb-a322-433f-9379-431aca87dc35)
-
+![image](https://github.com/user-attachments/assets/082f544c-abc9-4f77-b4d3-f9db9e2a5e1a)
 
 
 ![Screenshot 2024-06-04 223617](https://github.com/user-attachments/assets/a7e8043d-ea74-4bcf-9873-7946892bf4a9)
 
 
-![Screenshot 2024-06-04 223629](https://github.com/user-attachments/assets/ff06dafb-e58b-450a-932c-f731f2378d3c)
+![image](https://github.com/user-attachments/assets/9e58988d-bbdf-453b-b099-17d36b889443)
+
 
