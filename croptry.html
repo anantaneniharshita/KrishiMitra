@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crop Prediction Form</title>
+
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            overflow: hidden;
+            font-family: 'Arial', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;          
+            
+        }
+       
+        .page {
+            width: 60%;
+            height: 70%;
+            padding: 1.5rem;
+            background-color: rgba(252, 253, 251, 0.515);
+            border-radius: 80px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            position: absolute;
+            transition: opacity 0.6s ease-in-out;
+            opacity: 1;
+        }
+        .page.hidden {
+            opacity: 0;
+            pointer-events: none;
+        }
+        .container {
+            max-width: 100%;
+            margin: -20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .row {
+            padding-right: 50px;
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+        }
+        .column {
+            display: flex;
+            flex-direction: column;
+            flex: 1;
+            margin: 0 1rem;
+            padding-left: 50px;
+        }
+        .input-field {
+            margin-bottom: 1.4rem;
+        }
+        .input-field span {
+            color: black;
+            margin-bottom: 1rem;
+            font-weight: 900;
+            font-size: 1.15rem;
+            font-family: monospace;
+        }
+        .input-field input {
+            width: 100%;
+            padding: 0.75rem;
+            border: 3px solid  rgba(4, 7, 0, 0.977);
+            border-radius: 10px;
+            font-size: 1rem;
+            background-color: whitesmoke;
+        }
+        #predict-btn {
+            width: 12rem;
+            font-size: 1.1rem;
+            background-color: black;
+            color: white;
+            border: none;
+            border-radius: 10px;
+            padding: 0.75rem;
+            cursor: pointer;
+            font-family: monospace;
+            text-align: center;
+        }
+        #predict-btn:hover {
+            background-color:black;
+        }
+        .buttonp {
+            text-align: right;
+        }
+        h1 {
+            color: black;
+            font-size: 3rem;
+            font-family: monospace;
+        }
+        
+#background-video {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+
+}
+      
+    </style>
+</head>
+<body>
+    <img  id="background"
+        src="{{ url_for('static', filename='assets/bgkm.jpg') }}" herf="image">
+       
+
+   
+    <div class="page" id="page1" onclick="turnPage()">
+        <h1>Crop Prediction</h1>
+        <p></p>
+    </div>
+
+    <div class="page hidden" id="page2">
+        <section>
+            <div class="container">
+                <form id="crop-predict" action="{{ url_for('crop_prediction')}}" method="POST">
+                    <div class="row">
+                        <div class="column">
+                            <div class="input-field">
+                                <span>Nitrogen</span><br><br>
+                                <input type="text" name="nitrogen" id="nitrogen">
+                            </div>
+                            <div class="input-field">
+                                <span>Phosphorous</span><br><br>
+                                <input type="text" name="phosphorous" id="phosphorous">
+                            </div>
+                            <div class="input-field">
+                                <span>Rainfall (in mm)</span><br><br>
+                                <input type="text" name="rainfall" id="rainfall">
+                            </div>
+                        </div>
+                        <div class="column">
+                            <div class="input-field">
+                                <span>Potassium</span><br><br>
+                                <input type="text" name="potassium" id="potassium">
+                            </div>
+                            <div class="input-field">
+                                <span>pH Level</span><br><br>
+                                <input type="text" name="ph" id="ph">
+                            </div>
+                            <div class="input-field">
+                                <span>Region</span><br><br>
+                                <input type="text" name="city" id="city">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="buttonp">
+                        <button id="predict-btn" type="submit">Predict</button>
+                    </div>
+                </form>
+            </div>
+        </section>
+    </div>
+
+    <script>
+        function turnPage() {
+            document.getElementById('page1').classList.add('hidden');
+            document.getElementById('page2').classList.remove('hidden');
+        }
+    </script>
+    
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <script src="/static/js/main.js"></script>
+</body>
+</html>

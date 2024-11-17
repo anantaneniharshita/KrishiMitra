@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KrishiMitra</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+    integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+    <!-- <link href="C:\Users\anant\OneDrive\Documents\GitHub\Kisan-Plus\.venv\static\css\try.css" rel="stylesheet"> -->
+    <style>
+        body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow: hidden;
+}
+
+.video-container {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+}
+
+#background-video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -1;
+    transform: translate(-50%, -50%);
+}
+
+.content-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: rgb(148, 206, 48);
+  
+
+h1 {
+    font-size: 7rem;
+    font-weight: bolder;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+   
+}
+p{
+    font-size: 2rem;
+    font-weight: bolder;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+}
+.buttons {
+    margin-top: 20px;
+}
+
+.btn-transparent {
+    border: 2px solid rgb(148, 206, 48);
+    color: rgb(148, 206, 48);
+    background-color: transparent;
+    padding: 10px 20px;
+    margin: 10px;
+    font-size: 1.5rem;
+    font-family: Arial, sans-serif;
+    text-decoration: none;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.btn-transparent:hover {
+    background-color: rgb(148, 206, 48);
+    color: white;
+}
+    </style>
+</head>
+<body>
+    <div class="video-container">
+        <video autoplay muted loop id="background-video">
+            <source src="{{ url_for('static', filename='videos/vd3.mp4') }}" type="video/mp4">
+           
+        </video>
+        <div class="content-overlay">
+            
+            <div class="content text-center">
+                <h1 class="display-4">KrishiMitra</h1>
+                <p class="lead">Farmers AI Buddy</p>
+                <div class="buttons">
+                    <a href="/crop-planning/" class="btn btn-transparent">Crop Prediction</a>
+                    <a href="/disease-detection/" class="btn btn-transparent">Disease Detection</a>
+                   
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

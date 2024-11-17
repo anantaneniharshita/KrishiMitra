@@ -1,0 +1,66 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crop Result</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+    
+    <style>
+       body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            overflow: hidden;
+            font-family: 'Arial', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            
+            background-image: url('C:\\Users\\anant\\OneDrive\\Documents\\GitHub\\KrishiMitra\\static\\assets\\bgkm.webp');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+        }
+     
+        .bbb{
+        width: 50%;
+            height: 70%;
+            padding: 1.5rem;
+            background-color: rgba(252, 253, 251, 0.515);
+            border-radius: 80px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            position: absolute;
+     }
+          
+     #background{
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+
+}
+      </style>
+</head>
+
+<body>
+  <img  id="background"
+  src="{{ url_for('static', filename='assets/bgkm.jpg') }}" herf="image">
+   
+   
+    <div class="bbb" >
+        <p>{{ prediction }}</p>
+    </div>
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <script src="/static/js/main.js"></script>
+</body>
+
+</html>
